@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tabs, Button, Spin } from 'antd';
 import { GEO_OPTIONS, POS_KEY, API_ROOT, AUTH_HEADER, TOKEN_KEY } from '../constants'
+import { Gallery } from './Gallery';
 
 const { TabPane } = Tabs;
 
@@ -64,15 +65,27 @@ export class Home extends React.Component {
     }
 
     renderImagePosts() {
-        const { error, isLoadingGeolocation, isLoadingPosts } = this.state;
+        const { error, isLoadingGeoLocation, isLoadingPosts, posts } = this.state;
         if (error) {
             return error;
-        } else if (isLoadingGeolocation) {
+        } else if (isLoadingGeoLocation) {
             return <Spin tip="Loading geo location..."/>;
         } else if (isLoadingPosts) {
             return <Spin tip="Loading posts..."/>
+        } else if (posts.length > 0) {
+            const images = posts.map((post) => {
+                return {
+                    user: post.user,
+                    src: post.url,
+                    thumbnail: post.url,
+                    caption: post.message,
+                    thumbnailWidth: 400,
+                    thumbnailHeight: 300,
+                };
+            });
+            return <Gallery images={images}/>
         } else {
-            return 'Content of tab1';
+            return 'No nearby posts';
         }
     }
 
