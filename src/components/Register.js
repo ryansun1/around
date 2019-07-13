@@ -14,6 +14,7 @@ class RegistrationForm extends React.Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
+                //call backend with fetch
                 fetch(`${API_ROOT}/signup`, {
                     method: 'POST',
                     body: JSON.stringify({
@@ -30,7 +31,7 @@ class RegistrationForm extends React.Component {
                     .then((data) => {
                         console.log(data);
                         message.success('Registration succeed!');
-                        this.props.history.push('/login');
+                        this.props.history.push('/login');   //callback自動跳轉
                     })
                     .catch((err) => {
                         console.error(err);
