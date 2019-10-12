@@ -5,25 +5,24 @@ import { Home } from './Home';
 import { Switch, Route, Redirect } from 'react-router'
 
 export class Main extends React.Component {
-    //用來給router傳參數用
-    getLogin = () => {
-        return this.props.isLoggedIn ? <Redirect to="/home"/> : <Login handleLoginSucceed={this.props.handleLoginSucceed}/>;
-    }
+  getLogin = () => {
+    return this.props.isLoggedIn ? <Redirect to="/home"/> : <Login handleLoginSucceed={this.props.handleLoginSucceed}/>;
+  }
 
-    getHome = () => {
-        return this.props.isLoggedIn ? <Home/> : <Redirect to="/login"/>;
-    }
-    render() {
-        return (
-            <div className="main">
-                <Switch>
-                    <Route exact path="/" render={this.getLogin}/>
-                    <Route path="/login" render={this.getLogin}/>
-                    <Route path="/register" component={Register}/>
-                    <Route path="/home" render={this.getHome}/>
-                    <Route render={this.getLogin}/>
-                </Switch>
-            </div>
-        );
-    }
+  getHome = () => {
+    return this.props.isLoggedIn ? <Home/> : <Redirect to="/login"/>;
+  }
+  render() {
+    return (
+      <div className="main">
+        <Switch>
+          <Route exact path="/" render={this.getLogin}/>
+          <Route path="/login" render={this.getLogin}/>
+          <Route path="/register" component={Register}/>
+          <Route path="/home" render={this.getHome}/>
+          <Route render={this.getLogin}/>
+        </Switch>
+      </div>
+    );
+  }
 }
