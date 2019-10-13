@@ -212,7 +212,7 @@
       <workItem from="1563138023707" duration="3776000" />
       <workItem from="1563165222680" duration="794000" />
       <workItem from="1563637790597" duration="4141000" />
-      <workItem from="1570824860588" duration="5787000" />
+      <workItem from="1570824860588" duration="7052000" />
     </task>
     <task id="LOCAL-00001" summary="add tab component on home.js">
       <created>1563034724137</created>
@@ -235,11 +235,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563041104456</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add Gallery component on home.js">
+      <created>1570923851320</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570923851321</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33047000" />
+    <option name="totallyTimeSpent" value="34312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -256,7 +263,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.329927" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32876712" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32876712" />
