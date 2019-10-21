@@ -1,7 +1,6 @@
-//export const API_ROOT = 'https://around-75015.appspot.com/api/v1';
-//export const API_ROOT = 'http://35.224.180.233:8080';
-export const API_ROOT = 'http://34.68.176.76:8080';
 
+//export const API_ROOT = 'http://34.68.176.76:8080';
+export const API_ROOT = 'https://around-dot-around-179500.appspot.com/api/v1';
 export const TOKEN_KEY = 'TOKEN_KEY';
 export const GEO_OPTIONS = {
   enableHighAccuracy: true,
